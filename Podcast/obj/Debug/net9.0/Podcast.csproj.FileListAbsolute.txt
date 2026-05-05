@@ -1,0 +1,8 @@
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.csproj.AssemblyReference.cache
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.AssemblyInfoInputs.cache
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.AssemblyInfo.cs
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.csproj.CoreCompileInputs.cache
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\guill\source\repos\Podcast\Podcast\obj\Debug\net9.0\Podcast.MvcApplicationPartsAssemblyInfo.cache
