@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Podcast"
+    "\\Podcast",
+    "\\Podcast\\Models"
   ],
-  "SelectedNode": "\\Podcast\\AppDbContext.cs",
+  "SelectedNode": "\\Podcast.sln",
   "PreviewInSolutionExplorer": false
 }
