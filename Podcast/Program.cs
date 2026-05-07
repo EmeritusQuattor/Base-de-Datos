@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Podcast;
+using Podcast.Repositories;
+using static Podcast.Repositories.UsuarioRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,12 @@ builder.Services.AddSwaggerGen();
 // DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Repositories
+builder.Services.AddScoped<UsuarioRepository>();
+builder.Services.AddScoped<PodcastRepository>();
+builder.Services.AddScoped<EpisodioRepository>();
+builder.Services.AddScoped<ReproduccionRepository>();
 
 var app = builder.Build();
 

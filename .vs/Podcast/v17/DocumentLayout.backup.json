@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\guill\\source\\repos\\Podcast\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\controllers\\categoriacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\controllers\\episodiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\controllers\\episodiocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\controllers\\podcastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\controllers\\podcastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|c:\\users\\guill\\source\\repos\\podcast\\podcast\\repositories\\reproduccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C628BF8D-AF35-49E9-BED5-80C4F30FFF97}|Podcast\\Podcast.csproj|solutionrelative:podcast\\repositories\\reproduccionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CategoriaController.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\CategoriaController.cs",
+              "RelativeDocumentMoniker": "Podcast\\Controllers\\CategoriaController.cs",
+              "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\CategoriaController.cs*",
+              "RelativeToolTip": "Podcast\\Controllers\\CategoriaController.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAmwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:59:38.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EpisodioController.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\EpisodioController.cs",
+              "RelativeDocumentMoniker": "Podcast\\Controllers\\EpisodioController.cs",
+              "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\EpisodioController.cs",
+              "RelativeToolTip": "Podcast\\Controllers\\EpisodioController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAmwDYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:57:11.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PodcastController.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\PodcastController.cs",
+              "RelativeDocumentMoniker": "Podcast\\Controllers\\PodcastController.cs",
+              "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\PodcastController.cs",
+              "RelativeToolTip": "Podcast\\Controllers\\PodcastController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwCYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:55:25.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "Podcast\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "Podcast\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:37:41.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReproduccionRepository.cs",
+              "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Repositories\\ReproduccionRepository.cs",
+              "RelativeDocumentMoniker": "Podcast\\Repositories\\ReproduccionRepository.cs",
+              "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Repositories\\ReproduccionRepository.cs",
+              "RelativeToolTip": "Podcast\\Repositories\\ReproduccionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-07T03:09:26.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Program.cs",
               "RelativeDocumentMoniker": "Podcast\\Program.cs",
               "ToolTip": "C:\\Users\\guill\\source\\repos\\Podcast\\Podcast\\Program.cs",
               "RelativeToolTip": "Podcast\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T13:19:01.4Z",
               "EditorCaption": ""

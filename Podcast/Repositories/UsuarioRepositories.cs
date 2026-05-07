@@ -15,7 +15,7 @@ namespace Podcast.Repositories
                 using var conn = new SqlConnection(_connectionString);
                 var result = await conn.ExecuteScalarAsync<int>(
                 "SP_INSERT_USUARIO",
-                new { usuario.Nombre, usuario.Email, usuario.Contrasena },
+                new { usuario.Nombre, usuario.Email, usuario.Contrasena},
                 commandType: System.Data.CommandType.StoredProcedure
                 );
                 return result;
