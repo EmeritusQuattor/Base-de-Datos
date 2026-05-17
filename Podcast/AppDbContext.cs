@@ -24,11 +24,10 @@ namespace Podcast
             modelBuilder.Entity<Episodio>().HasKey(e => e.IdEpisodio);
             modelBuilder.Entity<Categoria>().HasKey(c => c.IdCategoria);
             modelBuilder.Entity<Reproduccion>().HasKey(r => r.IdReproduccion);
-
             // Column name mappings
             modelBuilder.Entity<Usuario>().Property(u => u.IdUsuario).HasColumnName("id_usuario");
-            modelBuilder.Entity<Usuario>().Property(u => u.Nombre).HasColumnName("nombre");
-            modelBuilder.Entity<Usuario>().Property(u => u.Email).HasColumnName("email");
+            modelBuilder.Entity<Usuario>().Property(u => u.Name).HasColumnName("nombre");
+            modelBuilder.Entity<Usuario>().Property(u => u.User).HasColumnName("usuario");
             modelBuilder.Entity<Usuario>().Property(u => u.Contrasena).HasColumnName("contrasena");
             modelBuilder.Entity<Usuario>().Property(u => u.FechaRegistro).HasColumnName("fecha_registro");
 

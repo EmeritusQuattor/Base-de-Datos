@@ -1,8 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Podcast;
 using Podcast.Repositories;
-using static Podcast.Repositories.UsuarioRepositories;
-
+using Podcast.Repositories.UsuarioRepository;
 var builder = WebApplication.CreateBuilder(args);
 
 // Services
