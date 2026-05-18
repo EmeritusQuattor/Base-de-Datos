@@ -20,7 +20,7 @@ namespace Podcast.Controllers
         public async Task<IActionResult> GetAll()
         {
             using var conn = new SqlConnection(_connectionString);
-            var categorias = await conn.QueryAsync<Categoria>(
+            var categorias = await conn.QueryAsync<Category>(
                 @"SELECT id_categoria AS IdCategoria, 
                   nombre AS Nombre, 
                   descripcion AS Descripcion 
@@ -30,7 +30,7 @@ namespace Podcast.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert(Categoria categoria)
+        public async Task<IActionResult> Insert(Category categoria)
         {
             using var conn = new SqlConnection(_connectionString);
             var id = await conn.ExecuteScalarAsync<int>(

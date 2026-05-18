@@ -8,9 +8,9 @@ namespace Podcast.Controllers
     [Route("api/[controller]")]
     public class ReproduccionController : ControllerBase
     {
-        private readonly ReproduccionRepository _repo;
+        private readonly ReproductionRepository _repo;
 
-        public ReproduccionController(ReproduccionRepository repo)
+        public ReproduccionController(ReproductionRepository repo)
         {
             _repo = repo;
         }
@@ -23,7 +23,7 @@ namespace Podcast.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert(Reproduccion reproduccion)
+        public async Task<IActionResult> Insert(Reproduction reproduccion)
         {
             var id = await _repo.InsertAsync(reproduccion);
             return Ok(new { id_reproduccion_nueva = id });

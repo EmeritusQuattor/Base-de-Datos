@@ -9,9 +9,9 @@ namespace Podcast.Controllers
     [Route("api/[controller]")]
     public class UsuarioController : ControllerBase
     {
-        private readonly UsuarioRepository _repo;
+        private readonly UserRepository _repo;
 
-        public UsuarioController(UsuarioRepository repo)
+        public UsuarioController(UserRepository repo)
         {
             _repo = repo;
         }
@@ -32,7 +32,7 @@ namespace Podcast.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert(Usuario usuario)
+        public async Task<IActionResult> Insert(UserC usuario)
         {
             var id = await _repo.InsertAsync(usuario);
             return Ok(new { id_usuario_nuevo = id });

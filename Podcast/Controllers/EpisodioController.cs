@@ -8,9 +8,9 @@ namespace Podcast.Controllers
     [Route("api/[controller]")]
     public class EpisodioController : ControllerBase
     {
-        private readonly EpisodioRepository _repo;
+        private readonly EpisodeRepository _repo;
 
-        public EpisodioController(EpisodioRepository repo)
+        public EpisodioController(EpisodeRepository repo)
         {
             _repo = repo;
         }
@@ -40,7 +40,7 @@ namespace Podcast.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Insert([FromForm] Episodio episodio, IFormFile? audioFile)
+        public async Task<IActionResult> Insert([FromForm] Episode episodio, IFormFile? audioFile)
         {
             if (audioFile != null)
             {
