@@ -12,7 +12,6 @@ namespace Podcast.Repositories
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
-
         public async Task<int> InsertAsync(UserC user)
         {
             using var conn = new SqlConnection(_connectionString);
@@ -23,7 +22,6 @@ namespace Podcast.Repositories
                 new { nombre = user.Name, usuario = user.User, contrasena = user.Password }
             );
         }
-
         public async Task<IEnumerable<UserC>> GetAllAsync()
         {
             using var conn = new SqlConnection(_connectionString);
@@ -33,7 +31,6 @@ namespace Podcast.Repositories
                   FROM USUARIO"
             );
         }
-
         public async Task<UserC?> GetByIdAsync(int id)
         {
             using var conn = new SqlConnection(_connectionString);
@@ -44,7 +41,6 @@ namespace Podcast.Repositories
                 new { Id = id }
             );
         }
-
         public async Task<UserC?> LoginAsync(string usuario, string password)
         {
             using var conn = new SqlConnection(_connectionString);
