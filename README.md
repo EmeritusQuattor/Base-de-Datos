@@ -136,7 +136,7 @@ Podcast/
 
 La API estará disponible en: `https://localhost:5001`
 
-## 📡 DTOs (Data Transfer Objects)
+## DTOs (Data Transfer Objects)
 
 ### UserDTO
 ```csharp
