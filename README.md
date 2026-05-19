@@ -234,7 +234,7 @@ public class CategoryDTO
 }
 ```
 
-## 🔌 Endpoints API
+## Endpoints API
 
 | Método | Endpoint | Descripción | DTOs |
 |--------|----------|-------------|---------|
@@ -617,7 +617,7 @@ function PodcastList() {
 export default PodcastList;
 ```
 
-## 📚 Documentación Swagger
+## Documentación Swagger
 
 Una vez que la API está corriendo, accede a Swagger UI:
 
