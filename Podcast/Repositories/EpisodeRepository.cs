@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using Podcast.Models;
+
 namespace Podcast.Repositories
 {
     public class EpisodeRepository
@@ -11,21 +12,19 @@ namespace Podcast.Repositories
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
-        public async Task<int> InsertAsync(Episode episodio)
+        public async Task<int> InsertAsync(Episode episode)
         {
             using var conn = new SqlConnection(_connectionString);
             return await conn.ExecuteScalarAsync<int>(
-                "SP_InsertEpisodio",
+                "SP_INSERT_EPISODIO",
                 new
                 {
-                    episodio.IdPodcast,
-                    episodio.Title,
-                    episodio.Description,
-                    episodio.Duration,
-                    episodio.UrlAudio,
-                    episodio.PublishTime,
-                    episodio.AudioGuid,
-                    episodio.AudioData
+                    id_podcast = episode.IdPodcast,
+                    titulo = episode.Title,
+                    descripcion = episode.Description,
+                    duracion = episode.Duration,
+                    url_audio = episode.UrlAudio,
+                    audio_data = episode.AudioData
                 },
                 commandType: System.Data.CommandType.StoredProcedure
             );
@@ -39,23 +38,21 @@ namespace Podcast.Repositories
                 commandType: System.Data.CommandType.StoredProcedure
             );
         }
-
-        public async Task<Episode?> GetAudioAsync(int idEpisodio)
+        public async Task<Episode?> GetAudioAsync(int idEpisode)
         {
             using var conn = new SqlConnection(_connectionString);
             return await conn.QueryFirstOrDefaultAsync<Episode>(
                 "SP_GET_AUDIO",
-                new { id_episodio = idEpisodio },
+                new { id_episodio = idEpisode },
                 commandType: System.Data.CommandType.StoredProcedure
             );
         }
-
-        public async Task<IEnumerable<Episode>> SearchAsync(string? keyword, string? categoria)
+        public async Task<IEnumerable<Episode>> SearchAsync(string? keyword, string? category)
         {
             using var conn = new SqlConnection(_connectionString);
             return await conn.QueryAsync<Episode>(
                 "SP_SEARCH_EPISODIOS",
-                new { keyword, categoria },
+                new { keyword, categoria = category },
                 commandType: System.Data.CommandType.StoredProcedure
             );
         }

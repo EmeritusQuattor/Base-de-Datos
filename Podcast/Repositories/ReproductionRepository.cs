@@ -12,32 +12,30 @@ namespace Podcast.Repositories
         {
             _connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
-
-        public async Task<int> InsertAsync(Reproduction reproduccion)
+        public async Task<int> InsertAsync(Reproduction reproduction)
         {
             using var conn = new SqlConnection(_connectionString);
             return await conn.ExecuteScalarAsync<int>(
                 "SP_INSERT_REPRODUCCION",
                 new
                 {
-                    reproduccion.IdEpisode,
-                    reproduccion.IdUser,
-                    reproduccion.TimeHeard
+                    id_episodio = reproduction.IdEpisode,
+                    id_usuario = reproduction.IdUser,
+                    segundos_escuchados = reproduction.TimeHeard
                 },
                 commandType: System.Data.CommandType.StoredProcedure
             );
         }
-
-        public async Task<IEnumerable<Reproduction>> GetByUsuarioAsync(int idUsuario)
+        public async Task<IEnumerable<Reproduction>> GetByUserAsync(int idUser)
         {
             using var conn = new SqlConnection(_connectionString);
             return await conn.QueryAsync<Reproduction>(
-                @"SELECT id_reproduccion AS IdReproduccion, id_episodio AS IdEpisodio,
-                  id_usuario AS IdUsuario, fecha_reproduccion AS FechaReproduccion,
-                  segundos_escuchados AS SegundosEscuchados
-                  FROM REPRODUCCION WHERE id_usuario = @IdUsuario
+                @"SELECT id_reproduccion AS IdReproduction, id_episodio AS IdEpisode,
+                  id_usuario AS IdUser, fecha_reproduccion AS ReproductionTime,
+                  segundos_escuchados AS TimeHeard
+                  FROM REPRODUCCION WHERE id_usuario = @IdUser
                   ORDER BY fecha_reproduccion DESC",
-                new { IdUsuario = idUsuario }
+                new { IdUser = idUser }
             );
         }
     }
