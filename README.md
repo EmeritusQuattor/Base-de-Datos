@@ -259,7 +259,7 @@ public class CategoryDTO
 | PUT | `/api/categories/{id}` | Actualizar categoría | UpdateCategoryDTO |
 | DELETE | `/api/categories/{id}` | Eliminar categoría | - |
 
-## 📝 Ejemplos de Requests/Responses
+## Ejemplos de Requests/Responses
 
 ### Crear Usuario
 **POST** `/api/users`
@@ -286,7 +286,7 @@ public class CategoryDTO
 ### Crear Podcast
 **POST** `/api/podcasts`
 
-**Request:**
+** Request:**
 ```json
 {
   "idUser": 1,
@@ -296,7 +296,7 @@ public class CategoryDTO
 }
 ```
 
-**Response (201 Created):**
+** Response (201 Created):**
 ```json
 {
   "idPodcast": 1,
@@ -360,7 +360,7 @@ public class CategoryDTO
 }
 ```
 
-## 📱 Guía para Frontend TypeScript
+## Guía para Frontend TypeScript
 
 ### Instalación de Dependencias
 
