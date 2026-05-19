@@ -2,7 +2,7 @@
 
 API REST para la plataforma de podcasts desarrollada con **ASP.NET Core** y **SQL Server**.
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 Esta es una base de datos y API backend para una plataforma de podcasts que permite:
 - Crear y gestionar usuarios
@@ -11,7 +11,7 @@ Esta es una base de datos y API backend para una plataforma de podcasts que perm
 - Registrar reproducciones de episodios
 - Gestionar categorías de podcasts
 
-## 🛠 Tecnologías
+## Tecnologías
 
 - **Framework:** ASP.NET Core 6+
 - **ORM:** Entity Framework Core
@@ -19,7 +19,7 @@ Esta es una base de datos y API backend para una plataforma de podcasts que perm
 - **API:** REST con Swagger
 - **Lenguaje:** C#
 
-## 📁 Estructura de Carpetas
+## Estructura de Carpetas
 
 ```
 Podcast/
@@ -42,7 +42,7 @@ Podcast/
 └── appsettings.json     # Configuración
 ```
 
-## 📊 Entidades
+## Entidades
 
 ### Usuario (UserC)
 | Campo | Tipo | Descripción |
@@ -92,7 +92,7 @@ Podcast/
 | Name | string | Nombre de la categoría |
 | Description | string? | Descripción |
 
-## 🚀 Guía de Instalación
+## Guía de Instalación
 
 ### Requisitos
 - .NET 6 SDK o superior
@@ -625,7 +625,7 @@ Una vez que la API está corriendo, accede a Swagger UI:
 https://localhost:5001/swagger/index.html
 ```
 
-## ⚙️ Configuración
+## Configuración
 
 Editar `appsettings.json` para configurar:
 - Conexión a base de datos
@@ -633,14 +633,14 @@ Editar `appsettings.json` para configurar:
 - CORS
 - Autenticación (cuando esté implementada)
 
-## 📝 Notas Importantes
+## Notas Importantes
 
 - **Seguridad:** Las contraseñas nunca se devuelven en las respuestas de la API
 - **DTOs:** Usamos DTOs para separar los datos expuestos de la API de las entidades internas
 - **Fechas:** Todas las fechas se devuelven en formato ISO 8601 (UTC)
 - **IDs:** Todos los IDs son números enteros (int)
 
-## 👥 Equipo Frontend
+## Equipo Frontend
 
 Para el equipo de TypeScript:
 1. Usar las interfaces TypeScript definidas arriba
@@ -648,9 +648,10 @@ Para el equipo de TypeScript:
 3. Consultar la tabla de endpoints para saber qué esperar
 4. Los ejemplos de React están listos para copiar/pegar
 
-## 📞 Contacto
+## Contacto
 
-Para dudas sobre la API, contactar al equipo de backend.
+Para dudas sobre la API, contáctenme a mi.
+-- EMERITUS IV
 
 ---
 
