@@ -11,25 +11,25 @@ namespace Podcast.Controllers
         private readonly PodcastRepository _repo;
         public PodcastController(PodcastRepository repo)
         {
-            _repo = repo;
+            this._repo = repo;
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var podcasts = await _repo.GetAllAsync();
-            return Ok(podcasts);
+            IEnumerable<PodcastModel> podcasts = await this._repo.GetAllAsync();
+            return this.Ok(podcasts);
         }
         [HttpGet("user/{idUser}")]
         public async Task<IActionResult> GetByUser(int idUser)
         {
-            var podcasts = await _repo.GetByUserAsync(idUser);
-            return Ok(podcasts);
+            IEnumerable<PodcastModel> podcasts = await this._repo.GetByUserAsync(idUser);
+            return this.Ok(podcasts);
         }
         [HttpPost]
         public async Task<IActionResult> Insert(PodcastModel podcast)
         {
-            var id = await _repo.InsertAsync(podcast);
-            return Ok(new { id_podcast_new = id });
+            int id = await this._repo.InsertAsync(podcast);
+            return this.Ok(new { id_podcast_new = id });
         }
     }
 }

@@ -10,11 +10,11 @@ namespace Podcast.Repositories
 
         public UserRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            this._connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
         public async Task<int> InsertAsync(UserC user)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.ExecuteScalarAsync<int>(
                 @"INSERT INTO USUARIO (nombre, usuario, contrasena)
                   VALUES (@nombre, @usuario, @contrasena);
@@ -24,7 +24,7 @@ namespace Podcast.Repositories
         }
         public async Task<IEnumerable<UserC>> GetAllAsync()
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<UserC>(
                 @"SELECT id_usuario AS IdUser, nombre AS Name, 
                   usuario AS User, fecha_registro AS Register 
@@ -33,7 +33,7 @@ namespace Podcast.Repositories
         }
         public async Task<UserC?> GetByIdAsync(int id)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryFirstOrDefaultAsync<UserC>(
                 @"SELECT id_usuario AS IdUser, nombre AS Name,
                   usuario AS User, fecha_registro AS Register
@@ -43,7 +43,7 @@ namespace Podcast.Repositories
         }
         public async Task<UserC?> LoginAsync(string usuario, string password)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryFirstOrDefaultAsync<UserC>(
                 @"SELECT id_usuario AS IdUser, nombre AS Name,
                   usuario AS User, fecha_registro AS Register

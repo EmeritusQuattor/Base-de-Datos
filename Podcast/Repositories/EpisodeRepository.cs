@@ -10,11 +10,11 @@ namespace Podcast.Repositories
 
         public EpisodeRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            this._connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
         public async Task<int> InsertAsync(Episode episode)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.ExecuteScalarAsync<int>(
                 "SP_INSERT_EPISODIO",
                 new
@@ -31,7 +31,7 @@ namespace Podcast.Repositories
         }
         public async Task<IEnumerable<Episode>> GetByPodcastAsync(int idPodcast)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<Episode>(
                 "SP_GET_EPISODIOS_BY_PODCAST",
                 new { id_podcast = idPodcast },
@@ -40,7 +40,7 @@ namespace Podcast.Repositories
         }
         public async Task<Episode?> GetAudioAsync(int idEpisode)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryFirstOrDefaultAsync<Episode>(
                 "SP_GET_AUDIO",
                 new { id_episodio = idEpisode },
@@ -49,7 +49,7 @@ namespace Podcast.Repositories
         }
         public async Task<IEnumerable<Episode>> SearchAsync(string? keyword, string? category)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<Episode>(
                 "SP_SEARCH_EPISODIOS",
                 new { keyword, categoria = category },
