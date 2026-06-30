@@ -12,31 +12,31 @@ namespace Podcast.Controllers
         private readonly string _connectionString;
         public CategoryController(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            this._connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            using var conn = new SqlConnection(_connectionString);
-            var categories = await conn.QueryAsync<Category>(
+            using SqlConnection conn = new SqlConnection(this._connectionString);
+            IEnumerable<Category> categories = await conn.QueryAsync<Category>(
                 @"SELECT id_categoria AS IdCategory,
                   nombre AS Name,
                   descripcion AS Description
                   FROM CATEGORIA"
             );
-            return Ok(categories);
+            return this.Ok(categories);
         }
         [HttpPost]
         public async Task<IActionResult> Insert(Category category)
         {
-            using var conn = new SqlConnection(_connectionString);
-            var id = await conn.ExecuteScalarAsync<int>(
+            using SqlConnection conn = new SqlConnection(this._connectionString);
+            int id = await conn.ExecuteScalarAsync<int>(
                 @"INSERT INTO CATEGORIA (nombre, descripcion)
                   VALUES (@nombre, @descripcion);
                   SELECT SCOPE_IDENTITY();",
                 new { nombre = category.Name, descripcion = category.Description }
             );
-            return Ok(new { id_category_new = id });
+            return this.Ok(new { id_category_new = id });
         }
     }
 }

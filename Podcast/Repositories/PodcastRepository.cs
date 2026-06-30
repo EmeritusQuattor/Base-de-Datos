@@ -10,12 +10,12 @@ namespace Podcast.Repositories
 
         public PodcastRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            this._connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
 
         public async Task<int> InsertAsync(PodcastModel podcast)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.ExecuteScalarAsync<int>(
                 "SP_INSERT_PODCAST",
                 new
@@ -31,7 +31,7 @@ namespace Podcast.Repositories
 
         public async Task<IEnumerable<PodcastModel>> GetAllAsync()
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<PodcastModel>(
                 @"SELECT id_podcast AS IdPodcast, id_usuario AS IdUser,
                   titulo AS Title, descripcion AS Description,
@@ -42,7 +42,7 @@ namespace Podcast.Repositories
 
         public async Task<IEnumerable<PodcastModel>> GetByUserAsync(int idUser)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<PodcastModel>(
                 @"SELECT id_podcast AS IdPodcast, id_usuario AS IdUser,
                   titulo AS Title, descripcion AS Description,

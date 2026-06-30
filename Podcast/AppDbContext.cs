@@ -1,12 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Podcast.Models;
+
 namespace Podcast
 {
     public class AppDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
         public DbSet<UserC> Usuarios { get; set; }
-        public DbSet<PodcastModel> Podcasts { get; set; } 
+        public DbSet<PodcastModel> Podcasts { get; set; }
         public DbSet<Episode> Episodios { get; set; }
         public DbSet<Reproduction> Reproducciones { get; set; }
         public DbSet<Category> Categorías { get; set; }
@@ -58,6 +62,5 @@ namespace Podcast
             modelBuilder.Entity<Reproduction>().Property(r => r.ReproductionTime).HasColumnName("fecha_reproduccion");
             modelBuilder.Entity<Reproduction>().Property(r => r.TimeHeard).HasColumnName("segundos_escuchados");
         }
-
     }
 }

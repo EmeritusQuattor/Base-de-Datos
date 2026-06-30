@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Podcast;
 using Podcast.Repositories;
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -15,7 +15,7 @@ builder.Services.AddScoped<PodcastRepository>();
 builder.Services.AddScoped<EpisodeRepository>();
 builder.Services.AddScoped<ReproductionRepository>();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {

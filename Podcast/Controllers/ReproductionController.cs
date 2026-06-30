@@ -11,19 +11,19 @@ namespace Podcast.Controllers
         private readonly ReproductionRepository _repo;
         public ReproductionController(ReproductionRepository repo)
         {
-            _repo = repo;
+            this._repo = repo;
         }
         [HttpGet("user/{idUser}")]
         public async Task<IActionResult> GetByUser(int idUser)
         {
-            var reproductions = await _repo.GetByUserAsync(idUser);
-            return Ok(reproductions);
+            IEnumerable<Reproduction> reproductions = await this._repo.GetByUserAsync(idUser);
+            return this.Ok(reproductions);
         }
         [HttpPost]
         public async Task<IActionResult> Insert(Reproduction reproduction)
         {
-            var id = await _repo.InsertAsync(reproduction);
-            return Ok(new { id_reproduction_new = id });
+            int id = await this._repo.InsertAsync(reproduction);
+            return this.Ok(new { id_reproduction_new = id });
         }
     }
 }

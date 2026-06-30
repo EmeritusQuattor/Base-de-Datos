@@ -10,11 +10,11 @@ namespace Podcast.Repositories
 
         public ReproductionRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("DefaultConnection")!;
+            this._connectionString = configuration.GetConnectionString("DefaultConnection")!;
         }
         public async Task<int> InsertAsync(Reproduction reproduction)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.ExecuteScalarAsync<int>(
                 "SP_INSERT_REPRODUCCION",
                 new
@@ -28,7 +28,7 @@ namespace Podcast.Repositories
         }
         public async Task<IEnumerable<Reproduction>> GetByUserAsync(int idUser)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using SqlConnection conn = new SqlConnection(this._connectionString);
             return await conn.QueryAsync<Reproduction>(
                 @"SELECT id_reproduccion AS IdReproduction, id_episodio AS IdEpisode,
                   id_usuario AS IdUser, fecha_reproduccion AS ReproductionTime,

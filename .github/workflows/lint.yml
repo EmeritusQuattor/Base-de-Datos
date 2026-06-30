@@ -1,0 +1,12 @@
+﻿name: lint
+on: [push, pull request]
+jobs:
+  dotnet-format:
+    runs-on: ubuntu-latest
+    steps:
+    -uses: actions/checkout@v4
+    -uses: actions/settup-dotnet@v4
+    with:
+      dotnet-version: '9.x';
+    -run: dotnet format --verify-no-changes    
+      
